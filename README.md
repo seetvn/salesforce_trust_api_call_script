@@ -8,3 +8,5 @@ or
 
 depending on your python version
 
+and just enter your instance to check for releaseversion
+
