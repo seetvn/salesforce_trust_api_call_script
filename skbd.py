@@ -11,6 +11,7 @@ def make_api_call(instance_name=None):
     return res
 
 def run():
+    print("type EXIT to leave")
     # get user input
     while True:
         instance_name = input("Please enter instance:").strip()
