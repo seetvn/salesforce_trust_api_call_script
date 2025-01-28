@@ -4,7 +4,7 @@ calls salesforce trust api
 either do:
 ```python skbd.py ```
 or
-```python skbd.py ```
+```python3 skbd.py ```
 
 depending on your python version
 
