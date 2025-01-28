@@ -2,6 +2,7 @@ import requests as rq
 
 def make_api_call(instance_name=None):
     if not instance_name or len(instance_name) == 0:
+        print('empty string')
         return {"response": "you entered nothing"}
     
     res = rq.get(f"https://api.status.salesforce.com/v1/instances/{instance_name}/status")
@@ -11,9 +12,10 @@ def make_api_call(instance_name=None):
 
 def run():
     # get user input
-    instance_name = input("Please enter instance:").strip()
-    response = make_api_call(instance_name)
-    if len(response.keys()) == 1:
-        return response
+    while True:
+        instance_name = input("Please enter instance:").strip()
+        if instance_name == "EXIT":
+            break
+        response = make_api_call(instance_name)
 
 run()
