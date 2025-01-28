@@ -6,7 +6,7 @@ def make_api_call(instance_name=None):
     
     res = rq.get(f"https://api.status.salesforce.com/v1/instances/{instance_name}/status")
     res = res.json()
-    print(f"Version is {res['releaseVersion']}" if 'releaseVersion' in res else f"===Instance {instance_name} NOT FOUND ====")
+    print(f"Version is {res['releaseVersion']}" if 'releaseVersion' in res else f"===releaseVersion for instance {instance_name} NOT FOUND ====")
     return res
 
 def run():
